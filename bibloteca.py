@@ -1,5 +1,7 @@
 import libro as l
 
+#Manuel
+
 # Crear una lista vacía para almacenar los libros
 libros = []
 
