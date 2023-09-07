@@ -14,7 +14,7 @@ def menu():
     print("4 - Elimiar ejemplar")
     print("5 - Mostrar ejemplares perstados")
     print("6 - Salir")
-
+#hola soy danisa
 while respuesta != "salir":
     menu()
     opt = input("\n Ingrese la opción de menú: ")
