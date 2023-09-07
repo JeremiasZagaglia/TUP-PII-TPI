@@ -2,6 +2,7 @@
 
 
 import os
+import bibloteca as bib
 
 print("Bienvenido!")
 respuesta = ''
@@ -26,8 +27,8 @@ while respuesta != "salir":
             #completar
             print()
         elif int(opt) == 3:
-            #completar
-            print()
+            bib.registrar_nuevo_libro(bib.libros)
+            bib.mostrar_datos_libro(bib.libros[-1])
         elif int(opt) == 4:
             #completar
             print()
@@ -41,5 +42,6 @@ while respuesta != "salir":
         print("Ingrese una opción numérica")
     
     input("Presione cualquier tecla para continuar....") # Pausa
+    os.system ("cls") #Limpiar pantalla
 
 print("Hasta luego!.")

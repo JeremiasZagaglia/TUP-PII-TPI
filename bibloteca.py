@@ -14,10 +14,9 @@ def ejemplares_prestados():
     # completar
     return None
 
-def registrar_nuevo_libro():
-    nuevo_libro = l.nuevo_libro()
-    #completar
-    return None
+def registrar_nuevo_libro(lib):
+    lib.append(l.nuevo_libro())
+    print("\n Su libro ha sido cargado con éxito.\n Los datos almacenado son:\n\n")
 
 def eliminar_ejemplar_libro():
     #completar
@@ -34,3 +33,12 @@ def devolver_ejemplar_libro():
 def nuevo_libro():
     #completar
     return None
+
+def mostrar_datos_libro(dicc):
+    print(f"Código de libro: {dicc['cod']}")
+    print(f"Título: {dicc['titulo']}")
+    print(f"Autor: {dicc['autor']}")
+    print(f"Cantidad de ejempl.prestados: {dicc['cant_ej_pr']}")
+    print(f"Cantidad de ejempl.disponibles: {dicc['cant_ej_ad']}\n")
+    
+    
