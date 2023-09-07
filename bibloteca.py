@@ -29,7 +29,7 @@ def eliminar_ejemplar_libro():
 def prestar_ejemplar_libro(lib: list):
     codigo = input("Ingrese el código del libro a buscar: ")
     dicc = buscar_libro(lib, codigo)
-    if not bool(dicc):
+    if not bool(dicc): #Verificamos que haya contenido en el dicc
         print("\nNo existe ningún libro con ese código\n")
         return None
     else:
@@ -37,10 +37,10 @@ def prestar_ejemplar_libro(lib: list):
         mostrar_datos_libro(dicc)
         if dicc['cant_ej_ad'] > 0:
             print("Préstamo confirmado \n")
-            lib.remove(dicc)
+            lib.remove(dicc) #removemos dicc con cantidad desactualizada
             dicc['cant_ej_ad'] -= 1
             dicc['cant_ej_pr'] += 1
-            lib.append(dicc)
+            lib.append(dicc) #insertamos dicc con cantidad actualizada
         else:
             print("Lo sentimos, no hay ejemplares disponibles.\n")
     return None
@@ -68,5 +68,5 @@ def buscar_libro(lib: list, cod: str) -> dict:
         dicc.update(elemento)
         if dicc['cod'] == cod:
             return dicc
-        dicc = {}
-    return dicc
+        dicc = {} 
+    return dicc #si el código no coincide se retorna un diccionario vacío.
