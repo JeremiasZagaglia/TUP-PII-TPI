@@ -43,7 +43,7 @@ def eliminar_ejemplar_libro():
         print("Libro encontrado: \n")
         
         if dicc['cant_ej_ad'] > 0:
-           print("usted ah eliminado un ejemplar")
+           print("usted ha eliminado un ejemplar")
            libros.remove(dicc)
            dicc['cant_ej_ad'] -= 1
            libros.append(dicc)
