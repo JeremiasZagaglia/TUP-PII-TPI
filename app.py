@@ -23,8 +23,7 @@ while respuesta != "salir":
         if int(opt) == 1:
             bib.prestar_ejemplar_libro(bib.libros)
         elif int(opt) == 2:
-            #completar
-            print()
+            bib.devolver_ejemplar_libro(bib.libros)
         elif int(opt) == 3:
             bib.registrar_nuevo_libro(bib.libros)
             bib.mostrar_datos_libro(bib.libros[-1])

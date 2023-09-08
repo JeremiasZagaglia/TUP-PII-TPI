@@ -46,8 +46,21 @@ def prestar_ejemplar_libro(lib: list):
     return None
                 
 # Para opción 2.
-def devolver_ejemplar_libro():
-    #completar
+def devolver_ejemplar_libro(libros):
+    codigo=input("Ingrese el codigo del libro a devolver: ")
+    dicc= buscar_libro(libros, codigo)
+    if dicc=={}:
+        print("Error: el libro no existe")
+    else:
+        if dicc['cant_ej_pr']>0:
+            print("Ejemplar devuelto")
+            libros.remove(dicc) #removemos dicc con cantidad desactualizada
+            dicc['cant_ej_pr'] -= 1
+            dicc['cant_ej_ad'] += 1
+            libros.append(dicc) #insertamos dicc con cantidad actualizada
+        else:
+            print("No existen ejemplares prestados")
+
     return None
 
 """def nuevo_libro():
