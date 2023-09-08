@@ -1,4 +1,5 @@
 import random
+import random
 import string
 
 # get random password pf length 8 with letters, digits, and symbols
