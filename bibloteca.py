@@ -22,7 +22,21 @@ def registrar_nuevo_libro(lib: list):
 
 # Para opción 4.
 def eliminar_ejemplar_libro():
-    #completar
+    codigo = input("Ingrese el código que decea eliminar: ") 
+    dicc = buscar_libro(libros, codigo)
+    if dicc=={}:
+        print("el libro que desea eliminar no existe")
+    else:
+        print("Libro encontrado: \n")
+        
+        if dicc['cant_ej_ad'] > 0:
+           print("usted ah eliminado un ejemplar")
+           libros.remove(dicc)
+           dicc['cant_ej_ad'] -= 1
+           libros.append(dicc)
+        else:
+         print("el libro no esta disponible")
+        
     return None
 
 # Para opción 1.

@@ -28,8 +28,10 @@ while respuesta != "salir":
             bib.registrar_nuevo_libro(bib.libros)
             bib.mostrar_datos_libro(bib.libros[-1])
         elif int(opt) == 4:
-            #completar
-            print()
+             bib.eliminar_ejemplar_libro()
+            
+        
+    
         elif int(opt) == 5:
             #completar
             print()
