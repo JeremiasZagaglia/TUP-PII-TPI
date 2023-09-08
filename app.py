@@ -17,6 +17,7 @@ def menu():
 
 while respuesta != "salir":
     menu()
+    
     opt = input("\n Ingrese la opción de menú: ")
     os.system ("cls") #Limpiar pantalla
     if opt.isnumeric():
@@ -29,12 +30,8 @@ while respuesta != "salir":
             bib.mostrar_datos_libro(bib.libros[-1])
         elif int(opt) == 4:
              bib.eliminar_ejemplar_libro()
-            
-        
-    
         elif int(opt) == 5:
-            #completar
-            print()
+            bib.ejemplares_prestados(bib.libros)
         elif int(opt) == 6:
             respuesta = "salir"
         else: print("Ingrese una opción válida")

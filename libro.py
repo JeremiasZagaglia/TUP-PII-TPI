@@ -14,5 +14,5 @@ def nuevo_libro():
     return libro_n
 
 def generar_codigo():
-    #completar
+    
     return cg.generar()

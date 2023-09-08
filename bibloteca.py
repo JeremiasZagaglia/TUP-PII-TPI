@@ -11,8 +11,21 @@ libros.append(l.libro3)
 # Las 5 funciones siguientes corresponden cada una con una opción del menú principal.
 
 # Para opción 5.
-def ejemplares_prestados():
-    # completar
+
+def ejemplares_prestados( lib):
+ 
+    dicc ={}
+    
+    print("ejemplares prestados")
+    for i in lib:
+        dicc.update(i)
+        print(f"titulo: {dicc['titulo']}")
+        print(f"codigo: {dicc['cod']}")
+        if dicc['cant_ej_pr']>0:
+            print(f"cantidades prestadas: {dicc['cant_ej_pr']}\n")   
+        else:
+            print("no hay ejemplares prestados\n")
+        dicc ={}
     return None
 
 # Para opción 3.
@@ -35,7 +48,7 @@ def eliminar_ejemplar_libro():
            dicc['cant_ej_ad'] -= 1
            libros.append(dicc)
         else:
-         print("el libro no esta disponible")
+            print("el libro no esta disponible")
         
     return None
 
@@ -76,10 +89,6 @@ def devolver_ejemplar_libro(libros):
             print("No existen ejemplares prestados")
 
     return None
-
-"""def nuevo_libro():
-    #completar
-    return None"""
 
 # Funciones auxiliares.
 
